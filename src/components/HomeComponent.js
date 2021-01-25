@@ -15,6 +15,9 @@ function RenderCard({item, isLoading, errMess}){
             <h4>{errMess}</h4>
         );
     }
+    else if(item==null){
+        return (<div></div>);
+    }
     else{
         return (
             <FadeTransform in 
