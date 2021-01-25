@@ -42,6 +42,7 @@ export const postComment = (dishId, rating, author, comment) => (dispatch) => {
     .catch(error =>  { console.log('post comments', error.message); alert('Your comment could not be posted\nError: '+error.message); });
 };
 
+
 export const fetchDishes = () => (dispatch) =>{
     dispatch(dishesLoading());
     return fetch(baseUrl + 'dishes')
@@ -129,7 +130,6 @@ export const fetchPromos = () => (dispatch) =>{
     })
         .then(response => response.json())
         .then(promos =>dispatch(addPromos(promos)))
-        .then(comments =>dispatch(addComments(comments)))
         .catch(error => dispatch(promosFailed(error.message)));
 }
 
