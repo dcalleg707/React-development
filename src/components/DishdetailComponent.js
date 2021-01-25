@@ -33,7 +33,7 @@ class CommentForm  extends Component{
     
 
     handleSubmit(values){
-        if(values.rating == undefined){
+        if(values.rating === undefined){
             alert("You must choose a rating");
         }
         else{
